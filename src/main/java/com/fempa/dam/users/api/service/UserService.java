@@ -47,7 +47,7 @@ public class UserService {
 		}
 		final String token = this.jwtService.generateToken(userEntity.getId(), userEntity.getEmail(),
 				userEntity.getRole());
-		return new AuthResponseDto(token, userEntity.getId(), userEntity.getName(), userEntity.getEmail(),
+		return new AuthResponseDto(token, userEntity.getId(), userEntity.getEmail(), userEntity.getName(),
 				userEntity.getRole());
 	}
 
